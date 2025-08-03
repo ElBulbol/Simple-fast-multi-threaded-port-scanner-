@@ -13,7 +13,7 @@ open_ports = []
 arg = argparse.ArgumentParser(description='Multithreaded Port Scanner')
 arg.add_argument("-ip", dest="ip", help="IP address to scan", default=DEFAULT_IP)
 arg.add_argument("-p", dest="port", help=f"Port range (default: {DEFAULT_PORT_RANGE})", type=int, default=DEFAULT_PORT_RANGE)
-arg.add_argument("-th", dest="threads_num", help=f"Number of threads (default: {DEFAULT_THREADS})", type=int, default=DEFAULT_THREADS)
+arg.add_argument("-th", dest="threads_num", help=f"Number of threads (default: {DEFAULT_THREADS}) \n <1-500 (normal)> <500-1000(high)> <1000-5000(intense)> ", type=int, default=DEFAULT_THREADS)
 arg.add_argument("-o", dest="output", help="Output file to save results", default=None)
 
 params = arg.parse_args()
